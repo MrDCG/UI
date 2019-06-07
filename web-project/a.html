@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,ul,li,p,a{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .top{
+
+            background-color: silver;
+            width: 100%;
+            height: 30px;
+
+        }
+        .ul1{
+            list-style: none;
+        }
+        .ul1>li{
+
+        }
+        .ul1>li>a{
+            float: right;
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            margin-right: 40px;
+            line-height: 27px;
+
+        }
+        .tubiao1{
+            width: 20px;
+            height: 20px;
+            background-image: url("img/shoppingcar.png");
+            background-size: cover;
+            margin-top: 4px;
+            margin-right: 2px;
+
+            padding: 0;
+
+            float: right;
+        }
+        .tubiao2{
+             width: 20px;
+             height: 20px;
+             background-image: url("img/help.png");
+             background-size: cover;
+             margin-top: 4px;
+             margin-right: 2px;
+
+             padding: 0;
+
+             float: right;
+         }
+        .tubiao3{
+            width: 20px;
+            height: 20px;
+            background-image: url("img/like.png");
+            background-size: cover;
+            margin-top: 4px;
+            margin-right: 2px;
+
+            padding: 0;
+
+            float: right;
+        }
+.brand>img:nth-child(1){
+    width: 160px;
+    height: 100px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}  .brand>img:nth-child(2){
+     width: 303px;
+     height: 100px;
+
+     background-repeat: no-repeat;
+     background-size: cover;
+     float: left;
+ }
+.i1{
+    width: 335px;
+    height: 32px;
+    border: 2px solid rgb(241,1,128);
+    border-right: 50px solid rgb(241,1,128);
+    margin-left: 300px;
+    margin-top: 33px;
+}
+  #fl>img{
+      width: 30px;
+      height:30px;
+      margin-top: 37px;
+      margin-left: -40px;
+  }
+#headr{
+    width: 100px;
+    height: 32px;
+    background-color: rgb(246,247,249);
+    margin-top: 35px;
+    margin-right: 150px;
+}
+        #headr>img{
+            width: 20px;
+            height: 20px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        #headr>span{
+            margin-left: 4px;
+          margin-top: 5px;
+
+        }
+        .bottom{
+            width: 100%;
+            height: 43px;
+
+            margin-top: 7%;
+        }
+        .fenlei{
+            width: 153px;
+            height:100%;
+            background-color: rgb(241,1,128);
+            margin-left: 17%;
+            color: #ffffff;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            transition: background-color 1s,color 1s;
+        }
+.fenlei:hover{
+    background-color: white;
+    color: rgb(241,1,128);
+}
+.l1{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+        .l1>a{
+
+            font-size: 18px;
+            color: black;
+            text-decoration: none;
+            transition: color 0.8s;
+        }
+        .l1>a:hover{
+            color: rgb(241,1,128);
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <ul class="ul1">
+       <li> <a href="">购物车</a> <div class="tubiao1"></div></li>
+        <li><a href="">帮助中心</a><div class="tubiao2"></div></li>
+        <li><a href="">加入收藏</a><div class="tubiao3"></div></li>
+        <li> <a href="" >设为首页</a></li>
+        <li> <a href="login.html" target="_blank">登陆</a></li>
+        <li><a href="regist.html" target="_blank">注册</a> </li>
+        <li><a href=""></a></li>
+        <li></li>
+    </ul>
+</div>
+<div class="brand"><img src="img/brand.png" alt=""><img src="img/b2.png" alt=""></div>
+<div class="fl">
+    <input class="i1" type="text">
+</div>
+<div class="fl" id="fl">
+<img src="img/search.png" alt="">
+</div>
+<div class="fr" id="headr">
+    <img class="fl" src="img/bag.png" alt="">
+<span class="fl">购物袋</span>
+</div>
+<div class="bottom">
+    <ul>
+        <li class="fenlei fl">
+        <p>商品分类</p>
+        </li>
+        <li class="l1 fl">
+            <a href="" style="color:rgb(241,1,128);font-weight: bold;">首页</a>
+        </li>
+        <li class="l1 fl">
+            <a href="">最后疯抢</a>
+        </li>
+        <li class="l1 fl">
+        <a href="">唯品快枪</a>
+    </li>
+        <li class="l1 fl">
+            <a href="">男装</a>
+        </li>
+        <li class="l1 fl">
+            <a href="">家电</a>
+        </li>
+        <li class="l1 fl">
+            <a href="">手机数码</a>
+        </li>
+        <li class="l1 fl">
+        <a href="">潮鞋</a>
+    </li>
+        <li class="l1 fl">
+            <a href="">国际</a>
+        </li>
+        <li class="l1 fl">
+        <a href="">预告</a>
+    </li>
+        <li class="l1 fl">
+            <a href="">家居家具</a>
+        </li>
+
+
+    </ul>
+
+</div>
+</body>
+
+
+</html>

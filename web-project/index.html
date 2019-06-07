@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+frameset:框架标签  把不同的页面构造成一个整体页面
+
+frameset 标签不能在body标签中使用
+cols  竖着将页面划分为几部分
+rows  横着将页面划分为几部分
+-->
+<frameset rows="25%,*" border="0">
+    <frame src="a.html"/>
+    <frameset cols="15%,*">
+        <frame src="b.html"/>
+
+            <frame src="c.html" name="c"/>
+        </frameset>
+
+    </frameset>
+
+</frameset>
+</html>

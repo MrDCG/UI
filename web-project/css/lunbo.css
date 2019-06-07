@@ -1,0 +1,69 @@
+.carousel-figure {
+    height: 500px;
+    width: 96%;
+
+}
+
+.carsoul-box {
+    height: 414px;
+    width: 100%;
+    margin: 0 auto;
+    position: static;
+
+}
+
+.ig {
+    height: 400px;
+    width: 96%;
+
+
+    position: absolute;
+}
+
+.ig img {
+    height: 400px;
+    width: 96%;
+    border:10px solid rgba(0,255,255,0.3) ;
+}
+
+.carousel-tabs {
+    position: relative;
+    top: -40px;
+    width: 184px;
+    height: 10px;
+    margin: 0 auto;
+    text-align: center;
+    list-style: none;
+}
+#body_lunbo{
+    display: flex;
+    justify-content: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+
+}
+.tab {
+    float: left;
+    text-align: center;
+    width: 36px;
+    height: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 10px;
+    background-color: #d4d4d3;
+}
+
+.tab-index {
+    cursor: pointer;
+    background-color: #286ee6;
+}
+
+.tab:hover {
+    cursor: pointer;
+    background-color: #286ee6;
+}
+body{
+    margin: 0 auto;
+}

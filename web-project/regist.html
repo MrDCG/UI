@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+tr>td:nth-child(1){
+    text-align: right;
+}
+tr>td:nth-child(2){
+    text-align: left;
+    width: 200px;
+    }
+        .shell{
+            width: 800px;
+            height: 700px;
+            border:5px double red;
+        }
+        .s{
+            margin-left: 153px;
+        }
+        form{
+            padding: 50px;
+            border:5px double red;
+            width: 500px;
+            margin-left: 400px;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        #a0{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/regist.js"></script>
+
+</head>
+<body>
+
+
+
+    <form action="">
+        <p style="margin-left: 100px; font-size: 20px">会员注册</p>
+        <table>
+            <tr>
+              <td>验证码：</td>
+              <td><input type="text"></td>
+              <td><img src="img/01.jpg" alt=""><a style="">点击切换</a></td>
+
+          </tr>
+            <tr>
+               <td>手机号码：</td>
+                <td><input type="text" id="t1" onblur="f1(1)"></td>
+                <td id="c1"></td>
+
+            </tr>
+            <tr>
+                <td>电子邮箱：</td>
+                <td><input type="text" id="t10" onblur="f1(10)"></td>
+                <td id="c10"></td>
+
+            </tr>
+            <tr>
+                <td>设置密码：</td>
+                <td><input type="password" id="t3" onblur="f1(3)"></td>
+                <td id="c3"></td>
+
+            </tr>
+            <tr>
+                <td>重置密码：</td>
+                <td><input type="password" id="t4" onblur="f1(4)"></td>
+                <td id="c4"></td>
+
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" id="t5" onblur="f1(5)"></td>
+                <td id="c5"></td>
+
+            </tr>
+            <tr>
+                <td>昵称：</td>
+                <td> <input type="text" id="t6" onblur="f1(6)"></td>
+                <td id="c6"></td>
+
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td> <input type="radio" name="sex">男<input type="radio" name="sex">女</td>
+                <td> </td>
+
+
+            </tr>
+            <tr>
+                <td>所在地：</td>
+                <td>
+
+                    <select id="one" onchange="func(this.value)">
+                        <option value="">--请选择--</option>
+                        <option value="0">四川省</option>
+                        <option value="1">山西省</option>
+                        <option value="2">陕西省</option>
+                    </select>
+                    <select id="two">
+                        <option value="">--请选择--</option>
+                    </select>
+                    <script>
+                        var two = document.getElementById('two');
+                        city = [];//申明
+
+                        //定义二级数据
+                        city[0] = ['成都市','绵阳市','宜宾市','眉山市','乐山市'];
+                        city[1] = ['太原市','大同市','忻州市','晋中市','长治市'];
+                        city[2] = ['西安市','铜川市','宝鸡市','咸阳市','渭南市'];
+                        function func(m){
+                            two.length = 1;
+
+                            //遍历生产option选项
+                            for (var i = 0; i < city[m].length; i++) {
+
+                                //创建一个option 把数据存储在option
+                                var op = new Option(city[m][i],i);
+
+                                //把带有数据的option 添加到第二个select
+                                two.add(op);
+                            };
+                        }
+                    </script>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>固定电话：</td>
+                <td>  <input type="text" id="t7" onblur="f1(7)"></td>
+                <td id="c7"></td>
+
+
+            </tr>
+            <tr>
+            <td>传真：</td>
+            <td>   <input type="text" id="t8" onblur="f1(8)"></td>
+            <td id="c8"></td>
+
+
+        </tr>
+            <tr>
+                <td>地址：</td>
+                <td>  <input type="text" id="t9" onblur="f1(9)"></td>
+                <td id="c9"></td>
+
+
+            </tr>
+            <tr>
+                <td>邮政编码：</td>
+                <td> <input type="text" id="t2" onblur="f1(2)"></td>
+                <td id="c2"></td>
+
+
+            </tr>
+            <tr>
+                <td>服务条款：</td>
+                <td colspan="2"> <textarea  cols="60" rows="10" readonly>想要注册成功必须支付100元</textarea></td>
+<td></td>
+
+
+            </tr>
+
+            <tr>
+
+                <td>我接受</td>
+                <td><input  type="checkbox" id="cx" onclick="Button()"></td>
+
+            </tr>
+<tr>
+    <td></td>
+    <td>
+
+        <input type="submit" value="我接受，创建我的用户" id="sub" disabled onclick="success()">
+
+    </td>
+<td></td>
+</tr>
+
+            </table>
+    </form>
+
+
+</body>
+</html>

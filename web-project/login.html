@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        ul{
+
+            list-style: none;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .brand>img:nth-child(1){
+            width: 160px;
+            height: 100px;
+            margin-left: 200px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+        }  .brand>img:nth-child(2){
+               width: 303px;
+               height: 100px;
+            margin-left: 500px;
+               background-repeat: no-repeat;
+               background-size: cover;
+               float: left;
+           }
+        .bg>img{
+            width: 100%;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .login{
+            width: 360px;
+            height: 435.6px;
+            background-color: white;
+            position: absolute;
+            z-index: 1;
+            top: 135px;
+            left: 850px;
+
+
+        }
+        .saoma{
+            width: 180px;
+            height: 50px;
+
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+        .saoma>a{
+            color: rgb(241,1,128);
+            text-decoration: none;
+
+
+        }
+        .saoma>a:hover{
+            color: rgb(241,1,128);
+        }
+        .zhanghu{
+            width: 179px;
+            height: 50px;
+
+            text-align: center;
+
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+        .zhanghu>a{
+            color: black;
+            text-decoration: none;
+
+
+        }
+        .zhanghu>a:hover{
+            color: rgb(241,1,128);
+        }
+        .denglu{
+            padding-top: 36px;
+            width: 360px;
+            height: 192px;
+           display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fun{
+            margin-top:28px;
+            font-size: 13px;
+            margin-left: -10px;
+
+        }
+        .fun>li{
+            margin-left: 20px;
+        }
+        .fun1{
+            margin-top:50px;
+            font-size: 13px;
+            margin-left: -10px;
+
+        }
+        .fun1>li{
+            margin-left: 20px;
+        }
+        .weixin{
+            width: 360px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .tishi{
+            width: 360px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            color: rgb(241,1,128);
+        }
+        #erweilogin{
+            display: block;
+            z-index: 10;
+
+        }
+        #zhanghulogin{
+            display: none;
+            z-index: 10;
+        }
+        .zdenglu{
+            padding-top: 36px;
+            width: 360px;
+            height: 192px;
+            display: flex;
+            justify-content: center;
+
+        }
+        .i1{
+            width: 250px;
+            height: 28px;
+            cursor:hand;
+            outline:none;
+            padding-left: 50px;
+            margin-left: 29px;
+            margin-bottom: 30px;
+
+        }
+        #img1{
+                  background-image: url("img/name.png");
+                  background-repeat: no-repeat;
+
+
+              }
+        #img2{
+            background-image: url("img/key.png");
+            background-repeat: no-repeat;
+
+
+        }
+        #submit{
+            width: 300px;
+            height: 46px;
+            margin-left: 25px;
+            background-color: rgb(241,1,128);
+
+        }
+        #submit>a{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function sd() {
+            document.getElementById("sd").style.color='rgb(241,1,128)';
+            document.getElementById("zd").style.color='black';
+        }
+        function zd() {
+            document.getElementById("zd").style.color='rgb(241,1,128)';
+        document.getElementById("sd").style.color='black';
+        }
+    </script>
+</head>
+
+<div class="brand"><img src="img/brand.png" alt=""><img src="img/b2.png" alt=""></div>
+<div class="bg"><img src="img/bg3.jpg" alt=""></div>
+<div class="login">
+    <div class="saoma fl">
+        <a href="#" id="sd" onclick="sd(); document.getElementById('erweilogin').style.display='block';document.getElementById('zhanghulogin').style.display='none';">扫码登陆</a>
+    </div>
+    <div class="zhanghu fr">
+        <a href="#" id="zd" onclick="zd(); document.getElementById('erweilogin').style.display='none';document.getElementById('zhanghulogin').style.display='block';">账户登陆</a>
+    </div>
+    <div id="erweilogin">
+    <div class="denglu">
+        <a href="index.html"><img src="img/foreverlove.png" alt="" style="width: 150px;height: 150px;"></a>
+    </div>
+    <div class="tishi"><p>点击二维码进入购物页面,扫码有惊喜</p></div>
+        <div class="tishi"><p>记住网页，要用电脑打开才行哦</p></div>
+    <div class="weixin">
+        <img src="img/weixin.jpg" alt="">
+    </div>
+    <div>
+        <ul class="fun">
+            <li class="fl">新浪微博</li>
+            <li class="fl">QQ</li>
+            <li class="fl">支付宝</li>
+            <li class="fl">更多</li>
+            <li class="fl">免费注册</li>
+        </ul>
+    </div>
+</div>
+    <div id="zhanghulogin">
+        <div class="zdenglu">
+        <form action="">
+            <input class="i1" id="img1" type="text" placeholder="手机号/用户名/邮箱" autocomplete="off"  >
+            <input class="i1" id="img2" type="password" placeholder="密码" autocomplete="off"  >
+            <button type="submit" id="submit" ><a href="index.html">登录</a></button>
+        </form>
+
+        </div>
+        <div class="weixin">
+            <img src="img/weixin.jpg" alt="">
+        </div>
+        <div>
+            <ul class="fun1">
+                <li class="fl">新浪微博</li>
+                <li class="fl">QQ</li>
+                <li class="fl">支付宝</li>
+                <li class="fl">更多</li>
+                <li class="fl">免费注册</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</html>

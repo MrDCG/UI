@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js" type="text/javascript"></script>
+
+
+
+
+
+    <script>
+
+
+        $(document).ready(function() {
+            carouselBox();
+            carouselTabs();
+        });
+        function carouselTabs() {
+            for(i = 0; i < 4; i++) {
+                $('.carousel-tabs').append('<li class="tab"></li>');
+            }
+        }
+
+        function carouselBox() {
+            //定义全局变量和定时器
+            var i = 0;
+            var timer;
+            var imglength = $('.carsoul-box .ig').length;
+            var index = $('.tab').index();
+            index = 0;
+            //设置第一张图片显示，其余隐藏
+            $('.ig').eq(0).show().siblings('.ig').hide();
+            //调用showTime()函数
+            showTime();
+            //当鼠标经过下面的tab时，触发两个事件(鼠标悬停和鼠标离开)
+            $('.tab').hover(function() {
+                //获取当前i的值，并显示，同时还要清除定时器
+                i = $(this).index();
+                Show();
+                clearInterval(timer);
+            }, function() {
+                showTime();
+            });
+            //创建一个showTime函数
+            function showTime() {
+                //定时器
+                timer = setInterval(function() {
+                    //调用一个Show()函数
+                    Show();
+                    i++;
+                    index++;
+                    //当图片是最后一张的后面时，设置图片为第一张
+                    if(i === imglength || index === imglength) {
+                        i = 0;
+                        index = 0;
+                    }
+                    if(i === index) {
+                        $('.tab').eq(i).addClass('tab-index').siblings('.tab').removeClass('tab-index');
+                    }
+                }, 2000);
+            }
+            //创建一个Show函数
+            function Show() {
+                //在这里可以用其他jquery的动画
+                $('.ig').eq(i).fadeIn(500).siblings('.ig').fadeOut(500);
+
+                //给.tab创建一个新的Class为其添加一个新的样式，并且要在css代码中设置该样式
+                $('.tab').eq(i).addClass('bg').siblings('.tab').removeClass('bg');
+
+            }
+        }
+
+
+
+
+    </script>
+
+
+    <link href="css/lunbo.css" rel="stylesheet" />
+    <style>
+
+        #div1{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #div1>div{
+            width: 20%;
+        }
+        div>img{
+            width: 220px;
+            transition-duration:1s;
+        }
+        div>img:hover{
+            transform: translate(0,-10px) ;
+        }
+    </style>
+</head>
+<body>
+<div id="body_lunbo">
+    <div id="div_01" class="carousel-figure clearfix">
+        <div class="carsoul-box clearfix">
+            <a class="ig" href="#"><img src="img/l1.jpg" alt=""/></a>
+            <a class="ig" href="#"><img src="img/l2.jpg"  alt=""/></a>
+            <a class="ig" href="#"><img src="img/l3.jpg" alt="" /></a>
+            <a class="ig" href="#"><img src="img/l6.jpg" alt="" /></a>
+        </div>
+        <ul class="carousel-tabs clearfix">
+        </ul>
+    </div>
+</div>
+<div id="div1">
+    <div>
+        <img src="img/z1.jpg" alt=""><br>
+        <p style="text-align: center">限时秒杀  3D曲面屏只要  998元</p><br>
+    </div>
+    <div>
+        <img src="img/z2.png" alt=""><br>
+        <p style="text-align: center">纯手工榨汁机  活动价  298元</p><br>
+    </div>
+
+    <div>
+        <img src="img/z3.jpg" alt="" ><br>
+        <p style="text-align: center">山地自行车  345元</p><br>
+    </div>
+    <div>
+        <img src="img/z4.jpg" alt="" ><br>
+        <p style="text-align: center">机箱  只要998</p><br>
+    </div>
+    <div>
+        <img src="img/z5.jpg" alt=""><br>
+        <p style="text-align: center">苹果耳机  只要998</p><br>
+    </div>
+    <div>
+        <img src="img/z6.jpg" alt=""><br>
+        <p style="text-align: center">高档背包  只要128</p><br>
+    </div>
+    <div>
+        <img src="img/z7.jpg" alt=""><br>
+        <p style="text-align: center">电器灶  只要998 </p><br>
+    </div>
+    <div>
+        <img src="img/z8.jpg" alt=""><br>
+        <p style="text-align: center">数据线  34</p><br>
+    </div>
+    <div>
+        <img src="img/z9.jpg" alt=""><br>
+        <p style="text-align: center">骁龙芯片  只要998</p><br>
+    </div><div>
+    <img src="img/z10.jpg" alt=""><br>
+    <p style="text-align: center">华为手机  全场1998元</p><br>
+</div><div>
+    <img src="img/z11.jpg" alt=""><br>
+    <p style="text-align: center">纯棉T恤  只要998</p><br>
+</div><div>
+    <img src="img/z12.jpg" alt=""><br>
+    <p style="text-align: center">纯棉T恤  只要998</p><br>
+</div>
+    <div>
+        <img src="img/z13.jpg" alt=""><br>
+        <p style="text-align: center">纯棉T恤  只要998</p><br>
+    </div>
+    <div>
+        <img src="img/z14.jpg" alt=""><br>
+        <p style="text-align: center">纯棉T恤  只要998</p><br>
+    </div>
+    <div>
+        <img src="img/z15.jpg" alt=""><br>
+        <p style="text-align: center">纯棉T恤  只要998</p><br>
+    </div><div>
+    <img src="img/z16.jpg" alt=""><br>
+    <p style="text-align: center">纯棉T恤  只要998</p><br>
+</div><div>
+    <img src="img/z17.jpg" alt=""><br>
+    <p style="text-align: center">纯棉T恤  只要998</p><br>
+</div><div>
+    <img src="img/z18.jpg" alt=""><br>
+    <p style="text-align: center">纯棉T恤  只要998</p><br>
+</div>
+</div>
+</body>
+</html>
